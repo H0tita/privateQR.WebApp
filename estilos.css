@@ -1,0 +1,294 @@
+/* Reset */
+/* Tipografía desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F8F5F1;
+  color: #1a1a1a;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-svg {
+  height: 18px; /* o el tamaño que necesites */
+  width: auto;
+  margin-bottom: 1.5rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.image {
+  height: 300px;
+  width: 300px;
+  background-image: url('orange.png');
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  margin: auto;
+  gap: 0.5rem; /* espacio entre textos */
+  overflow: visible;
+}
+
+.tagline {
+  font-size: 30px !important;
+  font-weight: bolder;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  color: white;
+  z-index: 1;
+}
+.tagline2 {
+  font-size: 24px !important;
+  letter-spacing: -0.04em; /* -4% equivalente */
+  text-align: center;
+}
+
+.description {
+  color: white;
+  margin-top: 16px;     /* separa del título */
+  z-index: 1;
+  max-width: 90%;
+  line-height: 1.4;
+}
+
+.hero p {
+  font-size: 14px;
+  color: #333;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+/* Input + botón */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+  max-width: 600px;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  max-height: 48px;
+}
+
+input[type="text"]:focus {
+  border-color: #f44336;
+}
+
+.generate-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 48px;
+  padding: 0 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: linear-gradient(to bottom, #FF544F, #FAD126);
+  border: 0.5px solid rgba(231, 231, 231, 0.5); /* stroke inside */
+  border-radius: 999px; /* botón redondo */
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  min-width: 163px;
+  margin-left: 20px;
+}
+
+.generate-btn:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+.generate-btn .icon {
+  width: 16px;
+  height: 18px;
+  filter: brightness(0) invert(1); /* fuerza blanco si el icono es negro */
+}
+
+
+button.generate-btn:hover {
+  transform: scale(1.02);
+}
+
+#qrcode {
+  margin: 2rem 0 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Descargar QR sin relleno */
+#download-btn {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ← centrado interno */
+  gap: 0.3rem;
+  margin: 40px auto; /* ← centrado horizontal */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: #9F9F9F; /* color inicial gris */
+  transition: color 0.3s ease;
+}
+
+#download-btn.enabled {
+  color: #f44336;
+}
+
+#download-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
+.download-btn:hover {
+  text-decoration: underline;
+}
+
+
+/* Sección Informativa */
+.info h2 {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+  font-weight: normal !important;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  max-width: 600px;
+  align-content: center;
+  margin-left: auto;
+
+}
+.features h2 {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+  font-weight: normal !important;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  max-width: 600px;
+  align-content: center;
+  margin-left: auto;
+  margin-top: 40px;
+}
+
+section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+section p {
+  font-size: 14px;
+  color: #1c1c1c;
+  max-width: 600px;
+  align-content: center;
+
+}
+
+.features ul {
+  list-style: decimal;
+  padding-left: 1.2rem;
+  text-align: left;
+  color: #444;
+  font-size: 14px;
+}
+
+.creator {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 40px;
+}
+
+.creator h2 {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+  font-weight: normal !important;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.creator a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #0077b5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.creator a:hover {
+  opacity: 0.8;
+}
+
+.creator img {
+  width: 20px;
+  height: 20px;
+}
+
+
+footer {
+  font-size: 12px;
+  color: #777777;
+  letter-spacing: -0.05em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  background: transparent; /* opcional: transparente o fondo si lo necesitas */
+  z-index: 10;
+}
+
+.mainStyle{
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive Desktop */
+@media (max-width: 720px) {
+  .mainStyle{
+    display: block;
+  }
+}
+
+@media (mai-width: 720px) {
+  .mainStyle{
+    display: flex;
+    justify-content: center;
+  }
+}

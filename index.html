@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QRPrivado</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+
+  <header>
+    <img src="Images/Logo_PrivateQR.svg" alt="private.qr logo" class="logo-svg" />
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="image">
+        <p class="tagline">Safe, offline, free</p>
+        <p class="tagline2">Create your QR</p>
+        <p class="description">
+          With this Web App you can create your own QR codes without relying on third parties, without internet,
+          private, secure and free.
+        </p>
+      </div>
+      <div class="mainStyle">
+        <input type="text" id="inputText" placeholder="https://private.qr" />
+        <button class="generate-btn" onclick="generateQR()">
+          <img src="Images/Sparkles Icon.svg" alt="Icono" class="icon" />
+          Create QR
+        </button>
+      </div>
+      
+      <div id="qrcode"></div>
+      <button id="download-btn" onclick="downloadQR()" disabled>
+        Download QR
+
+      </button>
+
+    </section>
+
+    <section class="info">
+      <h2>What is private.qr?</h2>
+      <p>
+        It is a WebApp that seeks to offer users an empowering, private, offline service, without depending on third
+        parties and free of charge.
+      </p>
+    </section>
+
+    <section class="features">
+      <h2>Future features</h2>
+      <ul>
+        <li>Local history of created and read QRs</li>
+        <li>QR Reader</li>
+        <li>Custom QR</li>
+        <li>Link shortener</li>
+        <li>Temporary QR</li>
+      </ul>
+    </section>
+
+    <section class="creator">
+      <h2>Follow the creator</h2>
+      <a href="https://www.linkedin.com/in/juan-r-645038251/" target="_blank" rel="noopener">
+        <img src="Images/LinkedIn Logo.svg" alt="LinkedIn logo" />
+        Juan Romero
+      </a>
+    </section>
+    
+  </main>
+
+  <footer>
+    <p>Designed by @juanromero</p>
+  </footer>
+
+  <script src="qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
